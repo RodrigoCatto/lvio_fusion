@@ -27,17 +27,16 @@ Here is the [paper](https://arxiv.org/abs/2106.06783).
 * ceres-solver
 * libgeographic-dev
 
-## Usage
+## Docker Usage
 
 Complie:
 ``` bash
-catkin_make
+docker build -t lvio_fusion_image .
 ```
 
 Run:
 ``` bash
-source devel/setup.bash
-roslaunch lvio_fusion_node kitti.launch
+docker run lvio_fusion_image
 ```
 
 ## Result

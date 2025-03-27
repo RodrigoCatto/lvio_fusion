@@ -17,16 +17,6 @@ Here is the [paper](https://arxiv.org/abs/2106.06783).
 }
 ```
 
-## Dependencies
-
-* ros (Kinetic/Melodic/Noetic)
-* Eigen3
-* Sophus
-* opencv
-* pcl
-* ceres-solver
-* libgeographic-dev
-
 ## Docker Usage
 
 Complie:

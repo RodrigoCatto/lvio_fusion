@@ -8,3 +8,5 @@ src/CMakeLists.txt
 **/__pycache__
 misc/log/**
 result
+
+2011_09_26/*

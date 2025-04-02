@@ -61,8 +61,8 @@ RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && cd /catkin_ws && catkin_m
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN echo "source /catkin_ws/devel/setup.bash" >> ~/.bashrc
 
-# Run the launch file
-CMD ["/bin/bash"]
+COPY bags/ /catkin_ws/src/bags/
+ENV ROS_MASTER_URI=http://localhost:11311
 
-
-# CMD ["/bin/bash", "-c", "source /opt/ros/noetic/setup.bash && source /catkin_ws/devel/setup.bash && roslaunch lvio_fusion_node kitti.launch"]
+# CMD ["/bin/bash"]
+CMD ["/bin/bash", "-c", "source /opt/ros/noetic/setup.bash && roscore"]

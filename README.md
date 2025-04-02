@@ -17,13 +17,9 @@ Here is the [paper](https://arxiv.org/abs/2106.06783).
 }
 ```
 
+## Docker Usage
 
-
-## Usage
-
-Place your bag files inside the bags folder. (They will be copied to the docker conteiner)
-
-Build:
+Complie:
 ``` bash
 docker build -t lvio_fusion_image .
 ```
@@ -35,6 +31,7 @@ docker run -it --rm --gpus all lvio_fusion_image
 cd /catkin_ws/bags/
 rosbag play NAME_OF_THE_BAG.bag
 roslaunch lvio_fusion_node kitti.launch
+docker run lvio_fusion_image
 ```
 
 

@@ -17,28 +17,26 @@ Here is the [paper](https://arxiv.org/abs/2106.06783).
 }
 ```
 
-## Dependencies
 
-* ros (Kinetic/Melodic/Noetic)
-* Eigen3
-* Sophus
-* opencv
-* pcl
-* ceres-solver
-* libgeographic-dev
 
 ## Usage
 
-Complie:
+Place your bag files inside the bags folder. (They will be copied to the docker conteiner)
+
+Build:
 ``` bash
-catkin_make
+docker build -t lvio_fusion_image .
 ```
 
 Run:
 ``` bash
-source devel/setup.bash
+docker run -it --rm --gpus all lvio_fusion_image
+
+cd /catkin_ws/bags/
+rosbag play NAME_OF_THE_BAG.bag
 roslaunch lvio_fusion_node kitti.launch
 ```
+
 
 ## Result
 

@@ -26,12 +26,15 @@ docker build -t lvio_fusion_image .
 
 Run:
 ``` bash
+# Terminal #1
 docker run -it --rm --gpus all lvio_fusion_image
 
+# Terminal #2
 cd /catkin_ws/bags/
 rosbag play NAME_OF_THE_BAG.bag
+
+# Terminal #3
 roslaunch lvio_fusion_node kitti.launch
-docker run lvio_fusion_image
 ```
 
 
